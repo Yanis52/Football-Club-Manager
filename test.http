@@ -1,0 +1,135 @@
+POST  http://localhost:3002/api/joueur
+Content-Type: application/json
+
+
+{
+    "nom": "gomis",
+    "prenom": "anthony",
+    "age": 38,
+    "vitesse": 92,
+    "tir": 93,
+    "passe": 82,
+    "dribble": 89,
+    "defense": 45,
+    "physique": 90,
+    "prix": 90000000,
+    "poste": "Attaquant",
+    "note": 93,
+    "strategy": ["attaquant", "polyvalent", "milieu", "defenseur"]
+}
+###
+GET http://localhost:3002/api/joueur
+
+
+###
+POST  http://localhost:3002/api/user
+Content-Type: application/json
+
+{
+    "nom": "gomis1",
+    "prenom": "antho",
+    "email": "poulet@kfc.com",
+    "password": "lodibidon",
+    "isAdmin": false,
+    "budget": 100000000
+}
+
+###
+GET http://localhost:3002/api/user
+
+###
+
+PUT http://localhost:3002/api/user/66211c9db5b213d9a102fd30
+Content-Type: application/json
+
+{
+    "nom": "gomis",
+    "prenom": "anthony",
+    "email": "poulet@kfc.com",
+    "password": "lodibidon",
+    "isAdmin": false,
+    "budget": 100000000,
+    "club": ["662119edd01eb9802aca9b0f"]
+}
+
+###
+POST http://localhost:3002/api/equipe
+Content-Type: application/json
+
+{   
+    "nom": "FcPoulet",
+    "valeur": 0,
+   "joueurs": []
+}
+
+###
+GET http://localhost:3002/api/equipe
+
+###
+GET http://localhost:3002/api/user/662130434bd086cdbba5ec4f/equipe
+###
+
+PUT http://localhost:3002/api/equipe/66212fa4ebc5600159d84d8b
+Content-Type: application/json
+
+{
+    "nom": "FcPoulet",
+    "valeur": 0,
+    "joueurs": [{
+    "_id": "6620eecdea0c28c9a8cb1604",
+    "nom": "Ronaldo",
+    "prenom": "Cristiano",
+    "age": 38,
+    "vitesse": 92,
+    "tir": 93,
+    "passe": 82,
+    "dribble": 89,
+    "defense": 45,
+    "physique": 90,
+    "prix": 90000000,
+    "poste": "Attaquant",
+    "note": 93,
+    "__v": 0
+  },{
+    "_id": "6620ef0c7979b6e9a4ccda2c",
+    "nom": "Mbappé",
+    "prenom": "Kylian",
+    "age": 25,
+    "vitesse": 96,
+    "tir": 88,
+    "passe": 85,
+    "dribble": 94,
+    "defense": 50,
+    "physique": 82,
+    "prix": 120000000,
+    "poste": "Attaquant",
+    "note": 92,
+    "strategy": [
+      "attaquant",
+      "polyvalent",
+      "milieu",
+      "defenseur"
+    ]
+  },  {
+    "_id": "6620ef0c7979b6e9a4ccda2d",
+    "nom": "De Bruyne",
+    "prenom": "Kevin",
+    "age": 31,
+    "vitesse": 85,
+    "tir": 90,
+    "passe": 95,
+    "dribble": 88,
+    "defense": 75,
+    "physique": 80,
+    "prix": 110000000,
+    "poste": "Milieu",
+    "note": 92,
+    "strategy": [
+      "attaquant",
+      "polyvalent",
+      "milieu",
+      "defenseur"
+    ]
+  }]
+}
+

@@ -1,0 +1,77 @@
+/* .grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px; 
+  background-color: #2b2f39; ;
+
+  .arrowLeft, .arrowRight {
+    cursor: pointer;
+    margin: 0 20px;
+    font-size: 24px;
+    user-select: none; // Empêche la sélection du texte des flèches lors du clic
+    background-color: #bd0e34fd; 
+
+  }
+
+  .cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; // Centre les cartes
+
+    > div {
+      margin: 10px;
+    }
+  }
+}
+ */
+
+ .grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  background-color: #2b2f39;
+  width: 90%;
+
+  .arrowLeft, .arrowRight {
+    cursor: pointer;
+    margin: 0 20px;
+    font-size: 24px;
+    user-select: none; // Empêche la sélection du texte des flèches lors du clic
+    background-color: #bd0e34fd;
+    color: white; // Couleur du texte pour améliorer le contraste
+    border: none; // Enlève les bordures par défaut
+    border-radius: 50%; // Rend le bouton circulaire
+    width: 48px; // Largeur fixe
+    height: 48px; // Hauteur fixe
+    display: flex;
+    justify-content: center; // Centre l'icône horizontalement
+    align-items: center; // Centre l'icône verticalement
+    transition: background-color 0.3s, transform 0.2s; // Transition pour le survol et le clic
+
+    &:hover {
+      background-color: darken(#bd0e34fd, 10%); // Assombrit le bouton au survol
+      transform: scale(1.1); // Agrandit le bouton au survol
+    }
+
+    &:active {
+      transform: scale(0.9); // Réduit le bouton lors du clic
+    }
+
+    // Utiliser ::before ou une balise <i> pour inclure des icônes
+    &::before {
+      content: ''; // Ici, vous pourriez inclure une icône avec CSS si nécessaire
+    }
+  }
+
+  .cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; // Centre les cartes
+
+    > div {
+      margin: 10px;
+    }
+  }
+}
